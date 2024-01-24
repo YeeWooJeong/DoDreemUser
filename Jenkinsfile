@@ -1,7 +1,6 @@
 pipeline {
     agent any
     tools {
-        git 'git'
         echo "nodejs 툴을 node16.17.0 이라고 등록한 걸 사용 한다."
         nodejs 'Nodejs16.17.0'
     }
