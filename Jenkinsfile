@@ -9,6 +9,7 @@ pipeline {
             steps {
                 echo 'building the application... START !!!'
                 sh 'pwd'
+                sh "npm install"
                 sh "npm run build"
             }
         }
