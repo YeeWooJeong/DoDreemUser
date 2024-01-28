@@ -1,0 +1,14 @@
+voca-front: /var/jenkins_home/workspace/DoDreemUserFrontServiceDeployer
+container_name: DoDreemUserFrontService
+
+# 빌드 할 경로와 Dockerfile 이름을 지정하였다.  
+build:  
+   context: ../DoDreemUserFrontService 
+   dockerfile: Dockerfile  
+ports:  
+   - 80:80  
+restart: always  
+
+# 
+# networks:  
+#    - voca
