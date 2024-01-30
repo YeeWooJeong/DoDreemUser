@@ -16,7 +16,7 @@ pipeline {
         stage('docker') {
             steps {
                 echo 'testing the application...'
-                sh 'docker build -t dodreamuserservice:1.0'
+                sh 'docker build --tag dodreamuserservice:1.0'
             }
         }
         stage('deploy') {
