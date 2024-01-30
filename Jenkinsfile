@@ -21,7 +21,7 @@ pipeline {
         }
         stage('deploy') {
             steps {
-                sh 'docker run -d -p 8081:80 --name dodreemuserservice '
+                sh 'docker run -d -p 8081:80 --name dodreemuserservice dodreemuserservice'
                 echo 'deploying the application... END !!!'
             }
         }
