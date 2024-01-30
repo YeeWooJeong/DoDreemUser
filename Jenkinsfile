@@ -16,7 +16,7 @@ pipeline {
         stage('docker') {
             steps {
                 echo 'testing the application...'
-                sh 'docker --help'
+                sh 'docker build -t dodreamuserservice:1.0'
             }
         }
         stage('deploy') {
