@@ -13,9 +13,10 @@ pipeline {
                 sh "npm run build"
             }
         }
-        stage('test') {
+        stage('docker') {
             steps {
                 echo 'testing the application...'
+                sh docker --help
             }
         }
         stage('deploy') {
