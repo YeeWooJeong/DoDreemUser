@@ -16,11 +16,12 @@ pipeline {
         stage('docker') {
             steps {
                 echo 'testing the application...'
-                sh 'docker build --tag dodreamuserservice:1.0 .'
+                sh 'docker build --tag dodreemuserservice:1.0 .'
             }
         }
         stage('deploy') {
             steps {
+                sh 'docker run -name dodreemuserservice -d -p 8081:80'
                 echo 'deploying the application... END !!!'
             }
         }
