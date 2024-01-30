@@ -16,7 +16,7 @@ pipeline {
         stage('docker') {
             steps {
                 echo 'testing the application...'
-                sh docker --help
+                sh 'docker --help'
             }
         }
         stage('deploy') {
