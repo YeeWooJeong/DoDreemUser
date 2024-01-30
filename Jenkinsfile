@@ -15,13 +15,13 @@ pipeline {
         }
         stage('docker') {
             steps {
-                echo 'testing the application...'
+                echo 'docker image build...'
                 sh 'docker build --tag dodreemuserservice:1.0 .'
             }
         }
         stage('deploy') {
             steps {
-                sh 'docker run -d -p 8081:80 --name dodreemuserservice dodreemuserservice'
+                sh 'docker run -d -p 8081:80 --name dodreemuserservice:1.0'
                 echo 'deploying the application... END !!!'
             }
         }
