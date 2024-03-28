@@ -21,7 +21,7 @@ pipeline {
         }
         stage('deploy') {
             steps {
-                sh 'docker run -d -p 8081:80 --name dodreemuserservice:1.0'
+                sh 'nohup docker run -d -p 8081:80 --name dodreemuserservice:1.0 &'
                 echo 'deploying the application... END !!!'
             }
         }
